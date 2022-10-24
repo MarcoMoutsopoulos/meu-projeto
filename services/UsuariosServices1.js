@@ -1,51 +1,18 @@
-const usuarios= require ('../databases/usuarios.json')
-const fs= require('fs')
-
-
 function listar(){
-console.table(usuarios.map(
-    u => {
-        return{ 
-            id: u.id,
-            nome: u.nome,
-            email: u.email,
-
-
-    }}
-))}
-
-
-
+    // Seu código aqui
+}
 
 function salvar(arrayDeUsuarios){
-    
-const fs = require('fs');
-fs.writeFileSync('./databases/usuarios.json',JSON.stringify(arrayDeUsuarios, null, 4));
-
-
+    // Seu código aqui
 }
 
 function cadastrar(objeto){
-    
-   
-
+// Seu código aqui
 }
 
-
 function detalhar(idUsuario){
-    
-
-    (usuarios.map(u=> {(u.id == idUsuarios)
-    console.log (u.nome)
-    console.log (u.email)
-    console.table(u.enderecos)})}
-
-
-            
-            
-    
-        // Seu código aqui
-
+// Seu código aqui
+}
 
 function remover(idDoUsuarioParaRemover){
     // Seu código aqui
