@@ -1,6 +1,6 @@
-const usuarios= require ('../databases/usuarios.json')
-const fs= require('fs')
-
+const usuarios= require ('../databases/usuarios.json');
+const fs= require('fs');
+const bcrypt= require ('bcrypt');
 
 function listar(){
 console.table(usuarios.map(
@@ -20,7 +20,7 @@ console.table(usuarios.map(
 function salvar(arrayDeUsuarios){
     
 const fs = require('fs');
-fs.writeFileSync('./databases/usuarios.json',JSON.stringify(arrayDeUsuarios, null, 4));
+fs.writeFileSync('../databases/usuarios.json',JSON.stringify(arrayDeUsuarios, null, 4));
 
 
 }
