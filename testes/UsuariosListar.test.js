@@ -9,10 +9,10 @@ function cadastrar(){
     
    
 
- //  fs.writeFileSync(usuarios,cadUsuario);}
- //  cadastrar();
+  fs.writeFileSync(usuarios,cadUsuario);}
+  cadastrar();
 
- function detalhar(idUsuario){
+ /*function detalhar(idUsuario){
     
 
   (usuarios.map(u=> {(u.id == idUsuarios)
@@ -24,4 +24,4 @@ function cadastrar(){
           
           
   
-      }
+      }*/
