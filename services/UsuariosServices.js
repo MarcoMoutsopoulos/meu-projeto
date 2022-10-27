@@ -2,6 +2,8 @@ const usuarios= require ('../databases/usuarios.json');
 const fs= require('fs');
 const bcrypt= require ('bcrypt');
 
+
+
 function listar(){
 console.table(usuarios.map(
     u => {
@@ -15,38 +17,42 @@ console.table(usuarios.map(
 ))}
 
 
-
-
 function salvar(arrayDeUsuarios){
     
 const fs = require('fs');
 fs.writeFileSync('../databases/usuarios.json',JSON.stringify(arrayDeUsuarios, null, 4));
 
-
 }
 
 function cadastrar(objeto){
-    
-   
+criptografarSenha=bcrypt.hashSync(objeto.senha, 10);
+// proxId=(usuarios.length).id;
 
+let arrayDeUsuarios= { id:         22,
+                       nome:       objeto.nome,
+                       email:      objeto.email,
+                       senha:      criptografarSenha.senha,
+                       enderecos:  [objeto.enderecos],
+                       pagamentos: [],
 }
-
+// salvar(arrayDeUsuarios); testando o salvar com o cadastro, ok!
+}                 
+                                      
 
 function detalhar(idUsuario){
     
 
-    (usuarios.map(u=> {(u.id == idUsuarios)
-    console.log (u.nome)
-    console.log (u.email)
-    console.table(u.enderecos)})}
+    usuarios.map(u=> { if (u.id == idUsuario){
+    console.log ("Nome: " + u.nome)
+    console.log ("E-Mail: " + u.email)
+    console.log("\nEndereços:")
+    console.table(u.enderecos)
+    console.log("\nFormas de Pagamento")
+    console.table(u.formasDePagamento)
 
+    }})}
 
-            
-            
-    
-        // Seu código aqui
-
-
+         
 function remover(idDoUsuarioParaRemover){
     // Seu código aqui
 }

@@ -1,27 +1,21 @@
 const UsuariosServices= require ('../services/UsuariosServices.js')
 const fs= require('fs')
 const usuarios= require('../databases/usuarios.json')
-
- //   UsuariosServices.listar();
-    
-//Funçao testada e OK.
-function cadastrar(){
-    
-   
-
-  fs.writeFileSync(usuarios,cadUsuario);}
-  cadastrar();
-
- /*function detalhar(idUsuario){
+let objeto= {
+  nome: "Marco Moutsopoulos",
+  email: "marcomoutsopoulos@dousuario.com",
+  senha: "patonalagoa",
+  endereco: "Rua dos usuários, nº 256. Usuariolândia-BA",
+}
+ //   UsuariosServices.listar();              //Funçao testada e OK.
     
 
-  (usuarios.map(u=> {(u.id == idUsuarios)
-  console.log (u.nome)
-  console.log (u.email)
-  console.table(u.enderecos)})
 
-  
-          
-          
-  
-      }*/
+//    UsuariosServices.detalhar(2);          //testado e OK
+
+
+
+//    UsuariosServices.cadastrar(objeto);   //testado e OK
+
+      
+
