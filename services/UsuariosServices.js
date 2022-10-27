@@ -36,9 +36,13 @@ function detalhar(idUsuario){
     
 
     usuarios.map(u=> { if (u.id == idUsuario){
-    console.log (u.nome)
-    console.log (u.email)
-    console.table(u.enderecos)}})}
+    console.log ("Nome: "+ u.nome)
+    console.log ("E-mail: "+ u.email)
+    console.log("\nEndereços:")
+    console.table(u.enderecos)
+    console.log("\nFormas de Pagamento")
+    console.table(u.formasDePagamento)
+}})}
 
 
             
@@ -48,7 +52,7 @@ function detalhar(idUsuario){
 
 
 function remover(idDoUsuarioParaRemover){
-    // Seu código aqui
+    
 }
 
 function alterar(novosDados, idUsuario){
