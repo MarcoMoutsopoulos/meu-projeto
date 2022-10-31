@@ -25,17 +25,17 @@ fs.writeFileSync('../databases/usuarios.json',JSON.stringify(arrayDeUsuarios, nu
 }
 
 function cadastrar(objeto){
-criptografarSenha=bcrypt.hashSync(objeto.senha, 10);
-// proxId=(usuarios.length).id;
+let criptografarSenha=bcrypt.hashSync(objeto.senha, 10);
+console.log(criptografarSenha)
 
 let arrayDeUsuarios= { id:         22,
                        nome:       objeto.nome,
                        email:      objeto.email,
                        senha:      criptografarSenha.senha,
                        enderecos:  [objeto.enderecos],
-                       pagamentos: [],
+                       pagamentos: [objeto.formasDePagamento],
 }
-// salvar(arrayDeUsuarios); testando o salvar com o cadastro, ok!
+//salvar(arrayDeUsuarios); // testando o salvar com o cadastro, ok!
 }                 
                                       
 
@@ -54,11 +54,35 @@ function detalhar(idUsuario){
 
          
 function remover(idDoUsuarioParaRemover){
-    // Seu código aqui
+ for (let i=0;i<usuarios.length;i++) {
+    
+    if (usuarios[i].id == idDoUsuarioParaRemover){
+       
+      usuarios.splice(i, 1)
+    }
+        
 }
+ console.log(usuarios)   
+ const fs = require('fs')       
+fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.stringify(usuarios, null, 4))
+}
+    
+
+    
+
 
 function alterar(novosDados, idUsuario){
-    // Seu código aqui
+    const bcrypt=require ('bcrypt');
+    var senhacripto=bcrypt.hashSync(novosDados.senha,10);
+
+    for(i=0;i<usuarios.length;i++){
+        if(usuarios[i].id == idUsuario){
+            usuarios[i].nome=novosDados.nome;
+            usuarios[i].email=novosDados.email;
+            usuarios[i].senha=senhacripto;
+        }
+    fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.stringify(usuarios,null,4)) }
+    
 }
 
 function addEndereco(novoEndereco, idUsuario){
