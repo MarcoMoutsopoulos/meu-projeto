@@ -21,8 +21,8 @@ const usuarios= require('../databases/usuarios.json');
  //    UsuariosServices.detalhar(2);        //testado e OK
  //    UsuariosServices.cadastrar(objeto);  //testado e OK
  //    UsuariosServices.remover(5);         //testado e OK
+ //    UsuariosServices.addEndereco(["Rua da Gloria, endereço ei de vencer!"],2) //testado e OK
 
-UsuariosServices.addEndereco(["Rua da Gloria, endereço ei de vencer!"],2)
-
+UsuariosServices.removerEndereco(0,2);
      
          

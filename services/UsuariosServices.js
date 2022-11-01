@@ -73,13 +73,13 @@ fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.st
 
 function alterar(novosDados, idUsuario){
     const bcrypt=require ('bcrypt');
-    var senhacripto=bcrypt.hashSync(novosDados.senha,10);
+    var senhaCripto=bcrypt.hashSync(novosDados.senha,10);
 
     for(i=0;i<usuarios.length;i++){
         if(usuarios[i].id == idUsuario){
             usuarios[i].nome=novosDados.nome;
             usuarios[i].email=novosDados.email;
-            usuarios[i].senha=senhacripto;
+            usuarios[i].senha=senhaCripto;
         }
     fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.stringify(usuarios,null,4)) }
     
@@ -103,9 +103,15 @@ function addEndereco(novoEndereco, idUsuario){
 
 
 function removerEndereco(posicaoDoEndereco, idUsuario){
-// Seu código aqui
-}
+    for(i=0;i<usuarios.length;i++){
+        if(usuarios[i].id == idUsuario){
+        let remover=usuarios[i].enderecos
+            
+        usuarios[i].enderecos=remover.splice(posicaoDoEndereco,1)}}  
 
+fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.stringify(usuarios,null,4))        
+
+        }
 function alterarEndereco(posicaoDoEndereco, novoEndereco, idUsuario){
 // Seu código aqui        
 }
