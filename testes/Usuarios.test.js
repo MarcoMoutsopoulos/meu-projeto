@@ -17,12 +17,13 @@ const usuarios= require('../databases/usuarios.json');
   ]
 }*/
 
- //    UsuariosServices.listar();           //Funçao testada e OK.
- //    UsuariosServices.detalhar(2);        //testado e OK
- //    UsuariosServices.cadastrar(objeto);  //testado e OK
- //    UsuariosServices.remover(5);         //testado e OK
+ //    UsuariosServices.listar();              //Funçao testada e OK.
+ //    UsuariosServices.detalhar(2);           //testado e OK
+ //    UsuariosServices.cadastrar(objeto);     //testado e OK
+ //    UsuariosServices.remover(5);            //testado e OK
  //    UsuariosServices.addEndereco(["Rua da Gloria, endereço ei de vencer!"],2) //testado e OK
+ //    UsuariosServices.removerEndereco(1,2);  //testado e OK
+ //    UsuariosServices.alteraEndereco(1,"Rua Vitoria,2",4); //testado e OK
 
-UsuariosServices.removerEndereco(0,2);
      
          

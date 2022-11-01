@@ -112,9 +112,16 @@ function removerEndereco(posicaoDoEndereco, idUsuario){
 fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.stringify(usuarios,null,4))        
 
         }
+
+
 function alterarEndereco(posicaoDoEndereco, novoEndereco, idUsuario){
-// Seu código aqui        
-}
+    for(i=0;i<usuarios.length;i++){
+        if(usuarios[i].id == idUsuario){   
+usuarios[i].enderecos[posicaoDoEndereco]=novoEndereco
+
+fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.stringify(usuarios,null,4))
+
+}}}
 
 function addFormaDePagamento(novaFormaDePagamento, idUsuario){
     // Seu código aqui
