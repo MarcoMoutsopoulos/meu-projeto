@@ -86,8 +86,20 @@ function alterar(novosDados, idUsuario){
 }
 
 function addEndereco(novoEndereco, idUsuario){
+    for(i=0;i<usuarios.length;i++){
+        if(usuarios[i].id == idUsuario){
+       let arrayTotal= usuarios[i].enderecos.concat(novoEndereco);
+       usuarios[i].enderecos=arrayTotal
+            console.log(usuarios[i])
+        }}}
+        
+       
     
-}
+
+    // fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.stringify(usuarios,null,4))
+
+// }})}
+
 
 function removerEndereco(posicaoDoEndereco, idUsuario){
 // Seu código aqui
