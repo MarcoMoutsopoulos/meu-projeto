@@ -26,7 +26,7 @@ const usuarios= require('../databases/usuarios.json');
  //    UsuariosServices.alteraEndereco(1,"Rua Vitoria,2",4);                     //testado e OK
  //    UsuariosServices.addFormaDePagamento("0000 0000 0000 0000",5);            //testado e OK
  //    UsuariosServices.removerFormaDePagamento(1,2);                            //testado e OK
+ //    UsuariosServices.alterarFormaDePagamento("1711 1711 1711 1711",0,128);
 
-UsuariosServices.alterarFormaDePagamento("1711 1711 1711 1711",0,128);
 
          
