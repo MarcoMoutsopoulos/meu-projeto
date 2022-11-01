@@ -68,8 +68,6 @@ fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.st
 }
     
 
-    
-
 
 function alterar(novosDados, idUsuario){
     const bcrypt=require ('bcrypt');
@@ -87,7 +85,6 @@ function alterar(novosDados, idUsuario){
 
 
 
-
 function addEndereco(novoEndereco, idUsuario){
     for(i=0;i<usuarios.length;i++){
         if(usuarios[i].id == idUsuario){
@@ -97,8 +94,6 @@ function addEndereco(novoEndereco, idUsuario){
  fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.stringify(usuarios,null,4))
 
 }}}
-
-
 
 
 
@@ -114,6 +109,7 @@ fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.st
         }
 
 
+
 function alterarEndereco(posicaoDoEndereco, novoEndereco, idUsuario){
     for(i=0;i<usuarios.length;i++){
         if(usuarios[i].id == idUsuario){   
@@ -121,7 +117,10 @@ usuarios[i].enderecos[posicaoDoEndereco]=novoEndereco
 
 fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.stringify(usuarios,null,4))
 
+
 }}}
+
+
 
 function addFormaDePagamento(novaFormaDePagamento, idUsuario){
     for(i=0;i<usuarios.length;i++){
@@ -129,8 +128,8 @@ function addFormaDePagamento(novaFormaDePagamento, idUsuario){
         let Pagamento=usuarios[i].formasDePagamento.concat(novaFormaDePagamento);
         usuarios[i].formasDePagamento=Pagamento
         
-        fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.stringify(usuarios,null,4))
-
+fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.stringify(usuarios,null,4))
+        
 
 }}}
 
@@ -149,8 +148,14 @@ fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.st
 
 
 function alterarFormaDePagamento(novaFormaDePagamento, posicaoDaFormaDePagamento, idUsuario){
-    // Seu código aqui
-}
+    for(i=0;i<usuarios.length;i++){
+        if(usuarios[i].id == idUsuario){
+usuarios[i].formasDePagamento[posicaoDaFormaDePagamento] =novaFormaDePagamento;
+ 
+fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.stringify(usuarios,null,4))
+
+
+}}}
 
 const UsuariosServices = {
     cadastrar,

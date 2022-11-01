@@ -17,15 +17,16 @@ const usuarios= require('../databases/usuarios.json');
   ]
 }*/
 
- //    UsuariosServices.listar();              //Funçao testada e OK.
- //    UsuariosServices.detalhar(2);           //testado e OK
- //    UsuariosServices.cadastrar(objeto);     //testado e OK
- //    UsuariosServices.remover(5);            //testado e OK
+ //    UsuariosServices.listar();                                                //testado e OK.
+ //    UsuariosServices.detalhar(2);                                             //testado e OK
+ //    UsuariosServices.cadastrar(objeto);                                       //testado e OK
+ //    UsuariosServices.remover(5);                                              //testado e OK
  //    UsuariosServices.addEndereco(["Rua da Gloria, endereço ei de vencer!"],2) //testado e OK
- //    UsuariosServices.removerEndereco(1,2);  //testado e OK
- //    UsuariosServices.alteraEndereco(1,"Rua Vitoria,2",4); //testado e OK
- //    UsuariosServices.addFormaDePagamento("0000 0000 0000 0000",5); //testado e OK
+ //    UsuariosServices.removerEndereco(1,2);                                    //testado e OK
+ //    UsuariosServices.alteraEndereco(1,"Rua Vitoria,2",4);                     //testado e OK
+ //    UsuariosServices.addFormaDePagamento("0000 0000 0000 0000",5);            //testado e OK
+ //    UsuariosServices.removerFormaDePagamento(1,2);                            //testado e OK
 
-UsuariosServices.removerFormaDePagamento(1,2);
+UsuariosServices.alterarFormaDePagamento("1711 1711 1711 1711",0,128);
 
          
