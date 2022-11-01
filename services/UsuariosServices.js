@@ -124,7 +124,7 @@ fs.writeFileSync('C:/AulasDigitalHouse/pizzaria/databases/usuarios.json',JSON.st
 }}}
 
 function addFormaDePagamento(novaFormaDePagamento, idUsuario){
-    // Seu código aqui
+    
 }
 
 function removerFormaDePagamento(posicaoDaFormaDePagamento, idUsuario){
