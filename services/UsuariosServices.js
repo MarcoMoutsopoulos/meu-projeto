@@ -86,7 +86,7 @@ function alterar(novosDados, idUsuario){
 }
 
 function addEndereco(novoEndereco, idUsuario){
-    // Seu código aqui
+    
 }
 
 function removerEndereco(posicaoDoEndereco, idUsuario){
